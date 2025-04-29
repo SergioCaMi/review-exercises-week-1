@@ -7,16 +7,29 @@ function XO(str) {
     // Inicializamos los contadores
     let xCounter = 0;
     let oCounter = 0;
-    // Recorremos la string
-    for (let i = 0; i < str.length; i++) {
-        let letter = str[i].toLowerCase(); // Creamos una variable que guarde el índice en minúsculas
 
+
+    for (const letter of str.toLowerCase()) {
         if (letter === "x") {
             xCounter++;
         } else if (letter === "o") {
             oCounter++;
-        }
+        }   
+    
     }
+
+
+
+    // Recorremos la string
+    // for (let i = 0; i < str.length; i++) {
+    //     let letter = str[i].toLowerCase(); // Creamos una variable que guarde el índice en minúsculas
+
+    //     if (letter === "x") {
+    //         xCounter++;
+    //     } else if (letter === "o") {
+    //         oCounter++;
+    //     }
+    // }
     return xCounter === oCounter;
 }
 
